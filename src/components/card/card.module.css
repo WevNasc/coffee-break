@@ -1,5 +1,5 @@
 .card {
-  background-color: white;
+  background-color: #FFFFFF;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 40px;
@@ -9,6 +9,8 @@
 .title {
   text-decoration: none;
   font-size: 2.4em;
+  font-weight: 400;
+  color: #191919;
 }
 
 .body {
@@ -27,6 +29,6 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.card:hover, .item__title {
+.card:hover > .title {
   color: #5B22FF;
 }
