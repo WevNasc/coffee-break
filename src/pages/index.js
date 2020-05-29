@@ -1,13 +1,14 @@
 import React from "react"
 
 import Container from "../components/container";
+import Layout from "../components/layout";
 
 export default function Home() {
   return (
-    <Container>
-      <h1>Coffee Break</h1>
-      <p>What a world.</p>
-      <img src="https://source.unsplash.com/random/400x200" alt="" />
-    </Container>
+    <Layout>
+      <Container>
+        <h1>Coffee Break</h1>
+      </Container>
+    </Layout>
   )
 }

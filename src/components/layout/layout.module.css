@@ -1,0 +1,9 @@
+.root {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 10px;
+  font: inherit;
+  font-family: sans-serif;
+  color: #191919;
+}
