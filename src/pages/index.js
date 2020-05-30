@@ -3,11 +3,11 @@ import { graphql } from "gatsby"
 
 import homeStyles from "./home.module.css";
 
-import Container from "../../components/container";
-import Layout from "../../components/layout";
-import Card from "../../components/card";
-import Navbar from "../../components/navbar";
-import Footer from "../../components/footer";
+import Container from "../components/container";
+import Layout from "../components/layout";
+import Card from "../components/card";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 export default function Home({ data }) {
   return (
