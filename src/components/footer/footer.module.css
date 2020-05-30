@@ -1,0 +1,17 @@
+.footer {
+  background: #191919;
+  height: 100px;
+}
+
+.content {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  margin-top: 20px;
+  font-size: 1.6em;
+  font-weight: 400;
+  color: #FFFFFF;
+}

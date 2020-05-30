@@ -7,7 +7,7 @@
 }
 
 .title {
-  font-size: 2.4em;
+  font-size: 2.6em;
   font-weight: 600;
   color: #5B22FF;
   text-decoration: none;
@@ -25,8 +25,8 @@
   border-radius: 5px;
   border: 2px solid #191919;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.6em;
+  font-weight: 500;
+  font-size: 1.8em;
   cursor: pointer;
   background: #191919;
   color: #FFFFFF;
