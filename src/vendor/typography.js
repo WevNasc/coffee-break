@@ -6,8 +6,14 @@ const typography = new Typography({
     {
       name: 'Poppins',
       styles: [
+        '100',
+        '100i',
+        '200',
+        '200i',
         '300',
         '300i',
+        '400',
+        '400i',
         '500',
         '500i',
         '700',
