@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
 import Container from "../components/container"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
@@ -11,7 +10,7 @@ import postStyles from "./post.module.css"
 export default function Post({ data }) {
   const post = data.markdownRemark
   return (
-    <Layout>
+    <>
       <Container>
         <Navbar />
         <h1 className={postStyles.title}>{post.frontmatter.title}</h1>
@@ -21,7 +20,7 @@ export default function Post({ data }) {
         </div>
       </Container>
       <Footer />
-    </Layout>
+    </>
   )
 }
 

@@ -2,25 +2,31 @@ import Typography from "typography"
 
 const typography = new Typography({
   baseFontSize: '10px',
-  baseLineHeight: 1.666,
   googleFonts: [
     {
-      name: 'Raleway',
+      name: 'Comfortaa',
       styles: [
-        '400',
-        '400i',
+        '300',
+        '300i',
         '500',
         '500i',
-        '600',
-        '600i',
+        '700',
+        '700i',
+      ],
+    },
+    {
+      name: 'Robot',
+      styles: [
+        '300',
+        '300i',
+        '500',
+        '500i',
         '700',
         '700i',
       ],
     },
   ],
-  bodyColor: "#666666",
-  headerFontFamily: ['Work Sans', 'sans-serif'],
-  bodyFontFamily: ['Work Sans', 'serif'],
+  blockMarginBottom: 0
 })
 
 export const { scale, rhythm, options } = typography

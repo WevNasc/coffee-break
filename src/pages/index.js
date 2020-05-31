@@ -1,31 +1,30 @@
 import React from "react"
+import { ThemeProvider } from 'styled-components';
 import { graphql } from "gatsby"
-
-import homeStyles from "./home.module.css";
-
-import Container from "../components/container";
-import Layout from "../components/layout";
-import Card from "../components/card";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+import Navbar from "../components/navbar"
+import Card from "../components/card"
+import { lightTheme } from "../themes"
 
 export default function Home({ data }) {
+
   return (
-    <Layout>
-      <Container>
-        <Navbar />
-        <div className={homeStyles.content}>
+    <>
+      <ThemeProvider theme={lightTheme} >
+        <Navbar links={[
+          { href: "/", name: "articles" },
+          { href: "/about", name: "about" }
+        ]} />
+        <div>
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <Card 
+            <Card
               title={node.frontmatter.title}
               link={node.fields.slug}
               body={node.excerpt}
               date={node.frontmatter.date} />
           ))}
         </div>
-      </Container>
-      <Footer />
-    </Layout>
+      </ThemeProvider>
+    </>
   )
 }
 
