@@ -6,20 +6,20 @@ const base = {
     "3.2em",
     "3.6em",
   ],
-  titleFontFamily : "Roboto, sans-serif",
-  textFontFamily : "Comfortaa, sans-serif"
+  titleFontFamily : "Poppins, sans-serif",
+  textFontFamily : "Poppins, sans-serif"
 }
 
-const light = {
+const light = { 
   primary: {
-    color: "#5B22FF",
-    primaryFont: "#f9f9f9",
-    secondaryFont: "#f7f7f7"
+    background: "#ffffff",
+    primaryFont: "#282524",
+    secondaryFont: "#f9f9f9"
   },
   secondary: {
-    color: "#f9f9f9",
-    primaryFont: "#333333",
-    secondaryFont: "#666666"
+    background: "#333333",
+    primaryFont: "#f9f9f9",
+    secondaryFont: "#f9f9f9"
   }
 }
 

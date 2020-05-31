@@ -4,18 +4,7 @@ const typography = new Typography({
   baseFontSize: '10px',
   googleFonts: [
     {
-      name: 'Comfortaa',
-      styles: [
-        '300',
-        '300i',
-        '500',
-        '500i',
-        '700',
-        '700i',
-      ],
-    },
-    {
-      name: 'Robot',
+      name: 'Poppins',
       styles: [
         '300',
         '300i',
