@@ -9,9 +9,11 @@ import Navbar from "../components/navbar"
 import Header from "../components/header"
 import Card from "../components/card"
 import Container from "../components/container"
+import Footer from "../components/footer"
 
 const Main = styled.main`
   margin-top: 100px;
+  margin-bottom: 100px;
 `
 
 const content = {
@@ -19,6 +21,13 @@ const content = {
     title: `Hey,\n I am Weverson!`,
     body: "This is coffee break, my blog, if you are someone interested in software engenniering and want to know how the things really works, this is the right place!",
     image: { src: "images/me.jpg", alt: "Weverson Nascimento" }
+  },
+  footer: {
+    social: [
+      { src: "images/twitter.svg", alt: "Twitter", link: "https://twitter.com/WevNasc" },
+      { src: "images/github.svg", alt: "Github", link: "https://github.com/wevnasc" },
+      { src: "images/linkedin.svg", alt: "Linkedin", link: "https://www.linkedin.com/in/wnascimentto/" },
+    ]
   }
 }
 
@@ -44,6 +53,7 @@ export default function Home({ data }) {
             ))}
           </Container>
         </Main>
+        <Footer social={content.footer.social} />
       </ThemeProvider>
     </>
   )
