@@ -2,6 +2,7 @@ import React from "react"
 import { ThemeProvider } from 'styled-components';
 import { graphql } from "gatsby"
 import Navbar from "../components/navbar"
+import Header from "../components/header"
 import Card from "../components/card"
 import { lightTheme } from "../themes"
 
@@ -14,6 +15,9 @@ export default function Home({ data }) {
           { href: "/", name: "articles" },
           { href: "/about", name: "about" }
         ]} />
+        <Header 
+          title="Hi, I am Weverson!"
+          body="I am a backend software engineer that loves coffee..." />
         <div>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <Card
