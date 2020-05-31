@@ -49,7 +49,8 @@ export default function Home({ data }) {
                 image={post.node.frontmatter.image}
                 title={post.node.frontmatter.title}
                 link={post.node.fields.slug}
-                body={post.node.excerpt} />
+                body={post.node.excerpt}
+                date={post.node.frontmatter.date} />
             ))}
           </Container>
         </Main>

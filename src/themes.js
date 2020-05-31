@@ -1,6 +1,6 @@
 const base = {
   fontSize: [
-    "1em",
+    "1.4em",
     "1.8em",
     "2em",
     "2.4em",
@@ -19,7 +19,8 @@ const light = {
   primary: {
     background: "#ffffff",
     primaryFont: "#282524",
-    secondaryFont: "#555555"
+    secondaryFont: "#555555",
+    accent: "#c4b479" 
   },
   secondary: {
     background: "#333333",

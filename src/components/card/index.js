@@ -16,12 +16,24 @@ const Title = styled.a`
   font-family: ${ props => props.theme.titleFontFamily};
   font-weight: 600;
   text-decoration: none;
+
+  :hover {
+    color: ${ props => props.theme.primary.accent};
+  }
 `
 
 const Body = styled.p`
   color: ${ props => props.theme.primary.secondaryFont};
   font-size: ${ props => props.theme.fontSize[1]};
-  font-family: ${ props => props.theme.titleFontFamily};
+  font-family: ${ props => props.theme.textFontFamily};
+  font-weight: 300;
+  margin-top: 15px;
+`
+
+const Date = styled.p`
+  color: ${ props => props.theme.primary.secondaryFont};
+  font-size: ${ props => props.theme.fontSize[0]};
+  font-family: ${ props => props.theme.textFontFamily};
   font-weight: 300;
   margin-top: 15px;
 `
@@ -36,7 +48,7 @@ const Image = styled.img`
   }
 `
 
-export default function ({ title, body, link, image }) {
+export default function ({ title, body, date, link, image }) {
   return (<Card>
     <CardLeft>
       <Image src={image}></Image>
@@ -44,6 +56,7 @@ export default function ({ title, body, link, image }) {
     <CardRight>
       <Title href={link}>{title}</Title>
       <Body>{body}</Body>
+      <Date>{date}</Date>
     </CardRight>
   </Card>);
 }
