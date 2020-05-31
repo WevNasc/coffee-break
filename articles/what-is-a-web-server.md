@@ -1,6 +1,7 @@
 ---
 title: "What is a web server?"
 date: "2020-05-27"
+image: "https://images.pexels.com/photos/1233530/pexels-photo-1233530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=300"
 ---
 
 ![clusters of computers](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2391&q=80)
