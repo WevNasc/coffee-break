@@ -14,13 +14,11 @@ export default function Post({ data }) {
   return (
     <>
       <ThemeProvider theme={lightTheme}>
-        <Navbar />
+        <Navbar background={post.frontmatter.image} 
+                title={post.frontmatter.title}  
+                date={post.frontmatter.date}/>
         <Container>
-          <h1>{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-          <div>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </div>
         </Container>
         <Footer social={content.footer.social} />
       </ThemeProvider>
@@ -35,6 +33,7 @@ export const query = graphql`
       frontmatter {
         date(formatString: "DD MMMM, YYYY")
         title
+        image
       }
     }
   }

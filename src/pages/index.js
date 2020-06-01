@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 
 import Navbar from "../components/navbar"
-import Header from "../components/header"
+import Hero from "../components/hero"
 import Card from "../components/card"
 import Container from "../components/container"
 import Footer from "../components/footer"
@@ -26,7 +26,7 @@ export default function Home({ data }) {
     <>
       <ThemeProvider theme={lightTheme} >
         <Navbar />
-        <Header
+        <Hero
           title={content.header.title}
           body={content.header.body}
           image={content.header.image} />

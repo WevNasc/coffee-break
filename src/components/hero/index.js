@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Container from '../container';
 
-const HeaderContainer = styled.div`
+const HeroContainer = styled.div`
   height: 400px;
   background: ${ props => props.theme.primary.color };
 
@@ -11,7 +11,7 @@ const HeaderContainer = styled.div`
     height: 250px;
   }
 `
-const Header = styled.div`
+const Hero = styled.div`
   height: 400px;
   display: flex;
   align-items: center;
@@ -61,16 +61,16 @@ const Image = styled.img`
 
 export default function({ title, body, image }) {
   return (
-    <HeaderContainer>
+    <HeroContainer>
       <Container>
-        <Header>
+        <Hero>
           <LeftContainer>
             <Title>{title}</Title>
             <Body>{body}</Body>
           </LeftContainer>
           <Image src={image.src} alt={image.alt} />
-        </Header>
+        </Hero>
       </Container>
-    </HeaderContainer>
+    </HeroContainer>
   )
 }

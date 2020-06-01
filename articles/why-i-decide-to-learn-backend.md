@@ -1,7 +1,7 @@
 ---
 title: "Why I decided to learn backend"
 date: "2020-05-09"
-image: "https://images.pexels.com/photos/7369/startup-photos.jpg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=300"
+image: "https://images.pexels.com/photos/7369/startup-photos.jpg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=800"
 ---
 
 When my career in software development started, the first step was like backend developer. At that time we didn't have sophisticated systems like we have today, everything was very simple and all systems basically ran in one or two machines, essentially the service make a request and receive a response just as HTML page, and everything seemed like a *CRUD*.

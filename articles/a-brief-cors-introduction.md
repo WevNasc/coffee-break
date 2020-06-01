@@ -1,7 +1,7 @@
 ---
 title: "A bried cors introduction"
 date: "2020-05-19"
-image: "https://images.pexels.com/photos/2058271/pexels-photo-2058271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=300"
+image: "https://images.pexels.com/photos/2058271/pexels-photo-2058271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=800"
 ---
 
 **CORS** is the acronyms to **Cross-Origin Resource Sharing**. This is used to share resources like JSON, images, CSS across different domains in a safe way. CORS takes advantage from HTTP header to access the controller layer, to block or allow requests made between different domains.
