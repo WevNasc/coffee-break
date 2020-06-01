@@ -12,8 +12,11 @@ import Container from "../components/container"
 import Footer from "../components/footer"
 
 const Main = styled.main`
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 100px 0;
+
+  @media (max-width: ${ props => props.theme.media.phone })  { 
+    margin: 50px 0;
+  }
 `
 
 const content = {

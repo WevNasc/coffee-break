@@ -6,12 +6,20 @@ import Container from '../container';
 const HeaderContainer = styled.div`
   height: 400px;
   background: ${ props => props.theme.primary.color };
+
+  @media (max-width: ${ props => props.theme.media.phone })  { 
+    height: 250px;
+  }
 `
 const Header = styled.div`
   height: 400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: ${ props => props.theme.media.phone })  { 
+    height: 250px;
+  }
 `
 
 const LeftContainer = styled.div`

@@ -7,7 +7,7 @@ const FooterContainer = styled.div`
   background: ${ props => props.theme.secondary.background};
 `
 
-const Footer = styled.p`
+const Footer = styled.div`
   height: 300px;
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@ export default function ({ social }) {
           </FooterLeft>
           <FooterRight>
             <SocialList>
-              {social.map(item => <SocialItem>
+              {social.map(item => <SocialItem key={item.alt}>
                 <SocialLink href={item.link} target="_blank"><SocialImage src={item.src} alt={item.alt} /></SocialLink>
               </SocialItem>)}
             </SocialList>

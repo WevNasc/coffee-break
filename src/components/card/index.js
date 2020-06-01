@@ -4,10 +4,19 @@ import styled from 'styled-components';
 const Card = styled.div`
   padding: 20px 0;
   display: flex;
+
+  @media (max-width: ${ props => props.theme.media.phone })  { 
+    flex-direction: column;
+  }
 `
 const CardLeft = styled.div``
 const CardRight = styled.div`
   margin-left: 40px;
+
+  @media (max-width: ${ props => props.theme.media.phone })  { 
+    margin-top: 15px;
+    margin-left: 0;
+  }
 `
 
 const Title = styled.a`
@@ -44,7 +53,8 @@ const Image = styled.img`
   border-radius: 10px;
 
   @media (max-width: ${ props => props.theme.media.phone })  { 
-    display: none;
+    width: 100%;
+    border-radius: 0;
   }
 `
 
