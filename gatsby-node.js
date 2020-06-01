@@ -5,10 +5,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `articles` })
+    const date = new Date(node.frontmatter.date)
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: `/articles/${date.getFullYear()}/${date.getMonth()}/${date.getDate()}${slug}`,
     })
   }
 }
@@ -22,6 +23,9 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             fields {
               slug
+            }
+            frontmatter {
+              date
             }
           }
         }
