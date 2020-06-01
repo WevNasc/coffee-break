@@ -10,8 +10,6 @@ The mobile development started with many problems to solve, like, managing many 
 
 I started to develop mobile application due to an opportunity that I received some time ago, and I started to improve my skills for this. Thanks to that, I had an opportunity to learn many things about OOP, design patterns, and software architecture, once most mobile platforms and applications are based on them.
 
-![change word](https://images.unsplash.com/photo-1499244571948-7ccddb3583f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3289&q=80)
-
 ## The change
 
 In the last year, I started thinking about changing my career again and the main cause was because the mobile development stopped being a challenge to me. The changes I used to see before, started being easy to solve, because there are many tools and I have got knowledge to solve them now. Besides, the challenges are now the same in most projects, like making a request, getting the response, and creating a beautiful screen.

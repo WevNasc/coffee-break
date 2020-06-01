@@ -8,6 +8,7 @@ import Footer from "../components/footer"
 
 import { lightTheme } from "../themes";
 import content from "../content"
+import postStyle from "./post.module.css";
 
 export default function Post({ data }) {
   const post = data.markdownRemark
@@ -18,7 +19,7 @@ export default function Post({ data }) {
                 title={post.frontmatter.title}  
                 date={post.frontmatter.date}/>
         <Container>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div className={postStyle.post} dangerouslySetInnerHTML={{ __html: post.html }} />
         </Container>
         <Footer social={content.footer.social} />
       </ThemeProvider>

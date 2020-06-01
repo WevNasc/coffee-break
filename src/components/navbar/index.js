@@ -47,9 +47,10 @@ const Title = styled.p`
   font-size: ${ props => props.theme.fontSize[6]};
   font-family: ${ props => props.theme.titleFontFamily};
   padding-bottom: 15px;
+  font-weight: 500;
 
   @media (max-width: ${ props => props.theme.media.phone })  { 
-    font-size: ${ props => props.theme.fontSize[3]};
+    font-size: ${ props => props.theme.fontSize[4]};
   }
 `
 

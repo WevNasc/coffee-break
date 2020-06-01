@@ -1,5 +1,5 @@
 ---
-title: "A bried cors introduction"
+title: "A bried CORS introduction"
 date: "2020-05-19"
 image: "https://images.pexels.com/photos/2058271/pexels-photo-2058271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=800"
 ---

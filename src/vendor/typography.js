@@ -21,7 +21,9 @@ const typography = new Typography({
       ],
     },
   ],
-  blockMarginBottom: 0
+  blockMarginBottom: 0,
+  headerFontFamily: ['Poppins', 'sans-serif'],
+  bodyFontFamily: ['Poppins', 'sans-serif'],
 })
 
 export const { scale, rhythm, options } = typography

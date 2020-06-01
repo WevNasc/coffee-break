@@ -1,6 +1,13 @@
 import React from "react"
-import containerStyles from "./container.module.css"
+import styled from 'styled-components';
 
-export default function Container({ children }) {
-  return <div className={containerStyles.container}>{children}</div>
+const Container = styled.div`
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 10px;
+  max-width: 1024px;
+`
+
+export default function({ children }) {
+  return <Container>{children}</Container>
 }
