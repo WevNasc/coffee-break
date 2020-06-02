@@ -5,7 +5,10 @@ module.exports = {
     keywords: "blog, software engenniering, development, tutorials",
     author: "Weverson Nascimento",
     url: "https://www.coffeebreak.fun",
-    locale: "en_US"
+    locale: "en_US",
+    social: {
+      twitter: "https://twitter.com/WevNasc"
+    }
   },
   plugins: [
     {
