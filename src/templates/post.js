@@ -8,7 +8,6 @@ import Footer from "../components/footer"
 import SEO from "../components/seo"
 
 import { lightTheme } from "../themes";
-import content from "../content"
 import postStyle from "./post.module.css";
 
 export default function Post({ data }) {
@@ -26,7 +25,7 @@ export default function Post({ data }) {
         <Container>
             <div className={postStyle.post} dangerouslySetInnerHTML={{ __html: post.html }} />
         </Container>
-        <Footer social={content.footer.social} />
+        <Footer />
       </ThemeProvider>
     </>
   )

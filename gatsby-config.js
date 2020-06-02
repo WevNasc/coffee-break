@@ -7,15 +7,24 @@ module.exports = {
     url: "https://www.coffeebreak.fun",
     locale: "en_US",
     social: {
-      twitter: "https://twitter.com/WevNasc"
+      twitter: "https://twitter.com/WevNasc",
+      github: "https://github.com/wevnasc",
+      linkedin: "https://www.linkedin.com/in/wnascimentto/"
     }
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `articles`,
-        path: `${__dirname}/articles/`,
+        name: `blog`,
+        path: `${__dirname}/content/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/content/assets`,
       },
     },
     {

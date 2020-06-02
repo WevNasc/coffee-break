@@ -44,7 +44,7 @@ export default function Home({ data }) {
             ))}
           </Container>
         </Main>
-        <Footer social={content.footer.social} />
+        <Footer />
       </ThemeProvider>
     </>
   )

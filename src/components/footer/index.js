@@ -1,6 +1,7 @@
 import React from "react"
 import styled from 'styled-components';
 import Container from "../container"
+import { useStaticQuery, graphql } from "gatsby"
 
 const FooterContainer = styled.div`
   height: 300px;
@@ -44,8 +45,29 @@ const SocialImage = styled.img`
   fill: ${ props => props.theme.secondary.primaryFont};
 `
 
+export default function () {
 
-export default function ({ social }) {
+  const social = useStaticQuery(graphql`
+    query SocialQuery {
+      allFile(filter: {absolutePath: {regex: "/social/"}}) {
+        edges {
+          node {
+            publicURL
+            name
+          }
+        }
+      }
+      site {
+        siteMetadata {
+          social {
+            twitter
+            github
+            linkedin
+          }
+        }
+      }
+    }
+`)
   return (
     <FooterContainer>
       <Container>
@@ -55,8 +77,10 @@ export default function ({ social }) {
           </FooterLeft>
           <FooterRight>
             <SocialList>
-              {social.map(item => <SocialItem key={item.alt}>
-                <SocialLink href={item.link} target="_blank"><SocialImage src={item.src} alt={item.alt} /></SocialLink>
+              {social.allFile.edges.map(image => <SocialItem key={image.node.name}>
+                <SocialLink href={social.site.siteMetadata.social[image.node.name]} target="_blank">
+                  <SocialImage src={image.node.publicURL} alt={image.node.name} />
+                </SocialLink>
               </SocialItem>)}
             </SocialList>
           </FooterRight>
