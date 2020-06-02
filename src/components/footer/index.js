@@ -1,11 +1,13 @@
 import React from "react"
-import styled from 'styled-components';
-import Container from "../container"
+import styled from 'styled-components'
+
 import { useStaticQuery, graphql } from "gatsby"
+
+import Container from "../container"
 
 const FooterContainer = styled.div`
   height: 300px;
-  background: ${ props => props.theme.secondary.background};
+  background: ${props => props.theme.secondary.background};
 `
 
 const Footer = styled.div`
@@ -15,16 +17,10 @@ const Footer = styled.div`
   justify-content: space-between;
 `
 
-const FooterLeft = styled.div`
-`
-
-const FooterRight = styled.div`
-`
-
 const Brand = styled.p`
-  color: ${ props => props.theme.secondary.primaryFont};
-  font-size: ${ props => props.theme.fontSize[4]};
-  font-family: ${ props => props.theme.titleFontFamily};
+  color: ${props => props.theme.secondary.primaryFont};
+  font-size: ${props => props.theme.fontSize[4]};
+  font-family: ${props => props.theme.titleFontFamily};
 `
 
 const SocialList = styled.ul`
@@ -34,9 +30,6 @@ const SocialList = styled.ul`
 const SocialItem = styled.li`
   display: inline;
   margin-left: 30px;
-`
-
-const SocialLink = styled.a`
 `
 
 const SocialImage = styled.img`
@@ -68,22 +61,23 @@ export default function () {
       }
     }
   `)
+
   return (
     <FooterContainer>
       <Container>
         <Footer>
-          <FooterLeft>
+          <div>
             <Brand>Coffee Break</Brand>
-          </FooterLeft>
-          <FooterRight>
+          </div>
+          <div>
             <SocialList>
               {social.allFile.edges.map(image => <SocialItem key={image.node.name}>
-                <SocialLink href={social.site.siteMetadata.social[image.node.name]} target="_blank">
+                <a href={social.site.siteMetadata.social[image.node.name]} target="_blank">
                   <SocialImage src={image.node.publicURL} alt={image.node.name} />
-                </SocialLink>
+                </a>
               </SocialItem>)}
             </SocialList>
-          </FooterRight>
+          </div>
         </Footer>
       </Container>
     </FooterContainer>

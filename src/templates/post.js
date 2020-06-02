@@ -19,7 +19,7 @@ export default function Post({ data }) {
         image={post.frontmatter.image}
         slug={post.fields.slug} />
       <ThemeProvider theme={lightTheme}>
-        <article>
+        <article>  
           <Navbar background={post.frontmatter.image}
             title={post.frontmatter.title}
             date={post.frontmatter.date} />
