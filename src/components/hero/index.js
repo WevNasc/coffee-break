@@ -1,5 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from "gatsby"
 
 import Container from '../container';
 
@@ -59,7 +60,14 @@ const Image = styled.img`
   }
 `
 
-export default function({ title, body, image }) {
+export default function({ title, body }) {
+  const data = useStaticQuery(graphql`
+    query AvatarQuery {
+      file(absolutePath: {regex: "/me.jpg/"}) {
+        publicURL
+      }
+    }
+  `)
   return (
     <HeroContainer>
       <Container>
@@ -68,7 +76,7 @@ export default function({ title, body, image }) {
             <Title>{title}</Title>
             <Body>{body}</Body>
           </LeftContainer>
-          <Image src={image.src} alt={image.alt} />
+          <Image src={data.file.publicURL} alt={"Weverson"} />
         </Hero>
       </Container>
     </HeroContainer>

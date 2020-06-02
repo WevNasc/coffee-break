@@ -14,16 +14,16 @@ export default function Post({ data }) {
   const post = data.markdownRemark
   return (
     <>
-     <SEO title={post.frontmatter.title}
-          description={post.excerpt}
-          image={post.frontmatter.image}
-          slug={post.fields.slug} />
+      <SEO title={post.frontmatter.title}
+        description={post.excerpt}
+        image={post.frontmatter.image}
+        slug={post.fields.slug} />
       <ThemeProvider theme={lightTheme}>
-        <Navbar background={post.frontmatter.image} 
-                title={post.frontmatter.title}  
-                date={post.frontmatter.date}/>
+        <Navbar background={post.frontmatter.image}
+          title={post.frontmatter.title}
+          date={post.frontmatter.date} />
         <Container>
-            <div className={postStyle.post} dangerouslySetInnerHTML={{ __html: post.html }} />
+          <div className={postStyle.post} dangerouslySetInnerHTML={{ __html: post.html }} />
         </Container>
         <Footer />
       </ThemeProvider>
