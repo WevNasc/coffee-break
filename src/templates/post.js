@@ -19,12 +19,14 @@ export default function Post({ data }) {
         image={post.frontmatter.image}
         slug={post.fields.slug} />
       <ThemeProvider theme={lightTheme}>
-        <Navbar background={post.frontmatter.image}
-          title={post.frontmatter.title}
-          date={post.frontmatter.date} />
-        <Container>
-          <div className={postStyle.post} dangerouslySetInnerHTML={{ __html: post.html }} />
-        </Container>
+        <article>
+          <Navbar background={post.frontmatter.image}
+            title={post.frontmatter.title}
+            date={post.frontmatter.date} />
+          <Container>
+            <section className={postStyle.post} dangerouslySetInnerHTML={{ __html: post.html }} />
+          </Container>
+        </article>
         <Footer />
       </ThemeProvider>
     </>
@@ -32,7 +34,7 @@ export default function Post({ data }) {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fields {
