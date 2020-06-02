@@ -17,7 +17,7 @@ const NavbarContainerColor = styled.div`
 `
 const NavbarTransparence = styled.div`
   height: ${props => props.enable ? "400px" : "100px"};
-  background: ${props => props.enable ? "rgba(0, 0, 0, 0.3)" : "transparent"};
+  background: ${props => props.enable ? "rgba(0, 0, 0, 0.4)" : "transparent"};
 `
 
 const Navbar = styled.nav`

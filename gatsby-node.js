@@ -9,7 +9,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: `/articles/${date.getFullYear()}/${date.getMonth()}/${date.getDate()}${slug}`,
+      value: `/blog/${date.getFullYear()}/${date.getMonth()}/${date.getDate()}${slug}`,
     })
   }
 }
