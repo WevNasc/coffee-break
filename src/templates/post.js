@@ -25,6 +25,7 @@ export default function Post({ data }) {
         <Container>
           <div className={postStyle.post} dangerouslySetInnerHTML={{ __html: post.html }} />
         </Container>
+        <Footer />
       </ThemeProvider>
     </>
   )
