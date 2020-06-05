@@ -37,7 +37,7 @@ export default function Home({ data }) {
               <Card
                 key={post.node.id}
                 image={post.node.frontmatter.image}
-                title={post.node.frontmatter.title}
+                title={post.node.fields.name}
                 link={post.node.fields.slug}
                 body={post.node.excerpt}
                 date={post.node.frontmatter.date} />
@@ -60,10 +60,10 @@ export const query = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
-            image
           }
           fields {
             slug
+            name
           }
           excerpt
         }

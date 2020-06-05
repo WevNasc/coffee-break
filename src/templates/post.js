@@ -20,7 +20,7 @@ export default function Post({ data }) {
         slug={post.fields.slug} />
       <ThemeProvider theme={lightTheme}>
         <article>  
-          <Navbar background={post.frontmatter.image}
+          <Navbar background={data.file.publicURL}
             title={post.frontmatter.title}
             date={post.frontmatter.date} />
           <Container>
@@ -34,7 +34,7 @@ export default function Post({ data }) {
 }
 
 export const query = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPostBySlug($slug: String!, $name: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fields {
@@ -46,6 +46,9 @@ export const query = graphql`
         image
       }
       excerpt
+    }
+    file(relativeDirectory: {eq: $name}, name: {eq: "bg"}) {
+      publicURL
     }
   }
 `
