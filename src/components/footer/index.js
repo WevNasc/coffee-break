@@ -72,7 +72,7 @@ export default function () {
           <div>
             <SocialList>
               {social.allFile.edges.map(image => <SocialItem key={image.node.name}>
-                <a href={social.site.siteMetadata.social[image.node.name]} target="_blank">
+                <a href={social.site.siteMetadata.social[image.node.name]} target="_blank" rel="noreferrer">
                   <SocialImage src={image.node.publicURL} alt={image.node.name} />
                 </a>
               </SocialItem>)}

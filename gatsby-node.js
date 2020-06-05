@@ -11,6 +11,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: `/blog/${date.getFullYear()}/${date.getMonth()}/${date.getDate()}${slug}`,
     })
+    createNodeField({
+      node,
+      name: "name",
+      value: slug.replace(/\//g, "")
+    })
   }
 }
 
@@ -23,6 +28,7 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             fields {
               slug
+              name
             }
             frontmatter {
               date
@@ -38,6 +44,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/templates/post.js`),
       context: {
         slug: node.fields.slug,
+        name: node.fields.name
       },
     })
   })
