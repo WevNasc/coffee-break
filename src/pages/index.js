@@ -22,6 +22,9 @@ const Main = styled.main`
 
 export default function Home({ data }) {
   const posts = data.allMarkdownRemark.edges
+  const images = data.allFile.edges.reduce((acc, thumb) => {
+    return Object.assign(acc, {[thumb.node.relativeDirectory]: thumb.node.publicURL})
+  }, {})
   return (
     <>
       <SEO title={"Hey, I am Weverson!"} />
@@ -36,8 +39,8 @@ export default function Home({ data }) {
             {posts.map(post => (
               <Card
                 key={post.node.id}
-                image={post.node.frontmatter.image}
-                title={post.node.fields.name}
+                image={images[post.node.fields.name]}
+                title={post.node.frontmatter.title}
                 link={post.node.fields.slug}
                 body={post.node.excerpt}
                 date={post.node.frontmatter.date} />
@@ -66,6 +69,14 @@ export const query = graphql`
             name
           }
           excerpt
+        }
+      }
+    }
+    allFile(filter: {name: {eq: "thumb"}}) {
+      edges {
+        node {
+          publicURL
+          relativeDirectory
         }
       }
     }
