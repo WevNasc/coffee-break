@@ -39,7 +39,7 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
 `
 
 const Title = styled.p`
