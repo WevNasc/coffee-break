@@ -2,13 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import { ThemeProvider } from 'styled-components';
 
+import GlobalStyle from '../components/global'
 import Container from "../components/container"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import SEO from "../components/seo"
 
 import { lightTheme } from "../themes";
-import postStyle from "./post.module.css";
 
 export default function Post({ data }) {
   const post = data.markdownRemark
@@ -19,12 +19,13 @@ export default function Post({ data }) {
         image={post.frontmatter.image}
         slug={post.fields.slug} />
       <ThemeProvider theme={lightTheme}>
+        <GlobalStyle />
         <article>  
           <Navbar background={post.frontmatter.image}
             title={post.frontmatter.title}
             date={post.frontmatter.date} />
           <Container>
-            <section className={postStyle.post} dangerouslySetInnerHTML={{ __html: post.html }} />
+            <section dangerouslySetInnerHTML={{ __html: post.html }} />
           </Container>
         </article>
         <Footer />
