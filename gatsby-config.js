@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://www.coffeebreak.fun`,
     title: "Coffee Break | hey, I am Weverson!",
     description: "This is coffee break. If you are someone interested in software engenniering and want to know the way things really work, this is the right place!",
     keywords: "blog, software engenniering, development, tutorials",
@@ -35,6 +36,7 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sitemap`
   ],
 }
