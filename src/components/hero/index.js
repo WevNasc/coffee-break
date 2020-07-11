@@ -51,9 +51,10 @@ const Body = styled.p`
 `
 
 const Image = styled.img`
-  width: 30%;
-  height: auto;
-  border-radius: 10px;
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  object-fit: cover;
 
   @media (max-width: ${ props => props.theme.media.phone })  { 
     display: none;
